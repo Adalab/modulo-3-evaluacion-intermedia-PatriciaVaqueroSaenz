@@ -1,13 +1,15 @@
 import React from "react";
-import MediaCard from "./MediaCard";
+import PokeList from "./PokeList";
+import data from '../data/data.json';
 import '../stylesheet/App.scss';
 
-class App extends React.Component {
-  render() {
+
+const App =()=> {
+  
     return (
-      <MediaCard />
+      <PokeList/>
     );
-  }
 }
+
 
 export default App;
