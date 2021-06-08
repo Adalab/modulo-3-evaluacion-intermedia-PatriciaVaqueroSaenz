@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Lista de Pokemon. ¡Hazte con todos!
+## ![Pokebola](https://cdn.emojidex.com/emoji/mdpi/Pokebola.png "Pokebola") Lista de Pokemon. ¡Hazte con todos! ![Pokebola](https://cdn.emojidex.com/emoji/mdpi/Pokebola.png "Pokebola")
 
 La web consiste en un listado de pokemon, con una tarjeta para cada uno con información relevante, como el nombre, tipo e imagen. 
 
