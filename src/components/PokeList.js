@@ -4,13 +4,16 @@ import "../stylesheet/App.scss";
 
 const PokeList = (props) => {
   const listItems = props.pokemonInfo.map((pokemon) => {
+    const keyString = pokemon.id.toString();
+  
     return (
-      <li className="pokelist__item">
+      <li key={keyString} className="pokelist__item">
         <Pokemon pokemon={pokemon} />
       </li>
     );
   });
   return <ul className="pokelist">{listItems}</ul>;
+  
 };
 
 export default PokeList;

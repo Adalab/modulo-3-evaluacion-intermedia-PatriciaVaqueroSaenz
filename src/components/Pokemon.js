@@ -3,8 +3,8 @@ import "../stylesheet/App.scss";
 
 const Pokemon = (props) => {
   const renderTypes = () => {
-    return props.pokemon.types.map((type) => {
-      return <li className="typeList__item">{type}</li>;
+    return props.pokemon.types.map((type,index) => {
+      return <li key={index} className="typeList__item">{type}</li>;
     });
   };
   return (
