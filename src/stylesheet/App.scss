@@ -1,63 +1,65 @@
-.App {
-  width: 300px;
-  height: 200px;
-  margin-top: 50px;
-  margin-left: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  justify-content: center;
-}
-
-.App-header {
+.header__section{
+  width: 100%;
+  height: 150px;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+}
+.title__header{
+  font-size: 32px;
+}
+.image__header{
+  width: 80px;
+  margin-left: 20px;
+  &:hover{
+    transform: scale(1.2) rotate(20deg);
+  }
+}
+.pokelist__section{
+  text-align: center;
+}
+.pokelist{
+  padding: 0 40px;
+  list-style: none;
+}
+.pokelist__item{
+  display: inline-block;
+  margin: 20px 20px;
 }
 
-.App-foto {
-  width: 70px;
-  height: 70px;
-  border-radius: 150px;
-}
-
-.App-header-title {
-  margin-left: 10px;
+.pokemon__card{
+  width: 150px;
+  height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 12px;
-}
-
-.App-header-maintitle {
-  font-size: 12px;
-  margin: 0;
-}
-
-.App-header-subtitle {
-  font-size: 9px;
-  margin: 0;
-}
-.App-main-paragraph {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 9px;
-  text-align: justify;
-}
-.App-footer {
-  display: flex;
-  flex-direction: row; 
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 9px;
-  justify-content: space-between;
   align-items: center;
+  background-color: #eee;
+  border-radius: 15px;
+  &:hover{
+    transform: scale(1.05);
+  }
 }
 
-.App-footer-paragraph {
-  color: rgb(113, 117, 117);
-  display: inline;
+.pokemon__card-typeList{
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-
-.App-icon {
-  color: red;
-  font-size: 16px;
+.pokemon__card-title{
+  text-transform: capitalize;
+}
+.typeList__item{
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: lightseagreen;
+  color: white;
+  padding: 5px;
+  border-radius: 15px;
 }
