@@ -1,24 +1,19 @@
 import React from "react";
-import '../stylesheet/App.scss';
+import "../stylesheet/App.scss";
 
-
-const Pokemon = (props) =>{
-
-    const renderTypes = () =>{
-        return props.pokemon.types.map(
-          (type) =>{
-            return <li>{type}</li>
-          }
-        );
-      };
-    return (
-        <article>
-            <img src={props.pokemon.url} alt={props.pokemon.name} />
-            <h3>{props.pokemon.name}</h3>
-            <ul>{renderTypes()}</ul>
-        </article>
-    );
-    
+const Pokemon = (props) => {
+  const renderTypes = () => {
+    return props.pokemon.types.map((type) => {
+      return <li className="typeList__item">{type}</li>;
+    });
+  };
+  return (
+    <article className='pokemon__card'>
+      <img className='pokemon__card-image' src={props.pokemon.url} alt={props.pokemon.name} />
+      <h3 className='pokemon__card-title'>{props.pokemon.name}</h3>
+      <ul className="pokemon__card-typeList">{renderTypes()}</ul>
+    </article>
+  );
 };
-  
-  export default Pokemon;
+
+export default Pokemon;
