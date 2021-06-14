@@ -24,3 +24,8 @@ const Pokemon = (props) => {
 };
 
 export default Pokemon;
+
+
+Pokemon.propTypes = {
+  pokemon: PropTypes.object
+};
