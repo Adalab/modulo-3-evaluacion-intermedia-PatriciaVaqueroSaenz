@@ -1,5 +1,6 @@
 import React from "react";
 import "../stylesheet/App.scss";
+import PropTypes from 'prop-types';
 
 const Pokemon = (props) => {
 
