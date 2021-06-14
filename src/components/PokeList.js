@@ -8,7 +8,7 @@ const PokeList = (props) => {
   
     return (
       <li key={keyString} className="pokelist__item">
-        <Pokemon pokemon={pokemon} />
+        <Pokemon pokemon={pokemon} handlePokemon={props.handlePokemon}/>
       </li>
     );
   });

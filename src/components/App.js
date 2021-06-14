@@ -6,6 +6,28 @@ import image from "../images/pokeball.png"
 
 const App = () => {
   const [pokemonInfo] = useState(data);
+  const [favs, setFavs] = useState([]);
+
+  const handlePokemon = clickedId => {
+    console.log(clickedId);
+    const favPokemonIndex = favs.findIndex(fav => {
+      return fav.id === clickedId;
+    });
+
+    //si no está en favoritos, lo añadimos 
+    if (favPokemonIndex === -1) {
+      const pokemonClicked = pokemonInfo.find(pokemon => {
+        return pokemon.id === clickedId;
+      });
+      favs.push(pokemonClicked);
+      setFavs([...favs]);
+    //si está en favoritos lo quitamos
+    } else {
+      favs.splice(favPokemonIndex, 1);
+      setFavs([...favs]);
+    }
+  };
+
   return (
     <>
       <header className="header__section">
@@ -14,7 +36,11 @@ const App = () => {
       </header>
       <main className="main__section">
         <section className="pokelist__section">
-          <PokeList pokemonInfo={pokemonInfo} />
+          <PokeList pokemonInfo={pokemonInfo} handlePokemon={handlePokemon}/>
+        </section>
+        <section>
+          <h2>Favoritos</h2>
+          <PokeList pokemonInfo={favs} handlePokemon={handlePokemon} />
         </section>
       </main>
     </>
